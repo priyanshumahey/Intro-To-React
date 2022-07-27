@@ -29,11 +29,23 @@ Since we'll be deploying this REACT application to Github, make sure you have GI
 ## Github Pages
 For deploymnent, we'll be making use of Github pages. Github pages will only deploy the front-end side of the REACT application. Github pages is use for static sites and will take all the HTML, CSS, and JavaScript then build it into a public website. Later on, we discuss how to deploy a site to github pages using the `gh-pages` npm package.
 
-## REACT Project Structure
-
-
-
-## REACT Basics
+## REACT BOilerplate Structure
+- node_modules: contains all the modules we use for the application
+- Public
+    - index.html: the only html file, the one the gets rendered
+    - favicon.ico: icon symbol
+    - manifest.json: makes the application into a progressive web app
+    - robots.txt: information, if the website allows for web scraping
+- src
+    - App.css: css file 
+    - Index.css: css file
+    - App.js: file that typically combines components by importing them
+    - serviceWorker.js: used to progressively add app features
+    - setupTests.js: writes test cases
+- package.json: list of all of the packages the application utilizes
+- .gitignore: stores what we want github to ignore
+- README.md: contains information on how to run the REACT application
+- package-lock.json: locks the versions of all the packages used
 
 
 ## Deployment on Github Pages
