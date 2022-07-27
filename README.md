@@ -27,9 +27,7 @@ NPX lets you run a command from a local or remote npm package. For REACT, the ma
 Since we'll be deploying this REACT application to Github, make sure you have GIT installed on your computer and a github account to use. Setting up github desktop may also be helpful.
 
 ## Github Pages
-For deploymnent, we'll be making use of Github pages. Github pages will only deploy the front-end side of the REACT application. Github pages is use for static sites and will take all the HTML, CSS, and JavaScript then build it into a public website
-
-
+For deploymnent, we'll be making use of Github pages. Github pages will only deploy the front-end side of the REACT application. Github pages is use for static sites and will take all the HTML, CSS, and JavaScript then build it into a public website. Later on, we discuss how to deploy a site to github pages using the `gh-pages` npm package.
 
 ## REACT Project Structure
 
@@ -39,3 +37,50 @@ For deploymnent, we'll be making use of Github pages. Github pages will only dep
 
 
 ## Deployment on Github Pages
+
+Deploying to github will require you to use the `gh-pages` npm package. We'll first need to start off by creating an empty repository on GitHub with the following format:
+- {username}.github.io (for example, priyanshumahey.github.io)
+
+From there, open up that repo in a local computer and we'll create a react app in it. We can use 
+``` shell
+$ npx create-react-app website
+```
+Then we need to cd into the new folder and install `gh-pages` using npm:
+``` shell
+$ npm install gh-pages --save-dev
+```
+
+Then from there, we need to edit and add a homepage property to the package.json file.
+
+Open the project.json file and add a homepage property in the form of:
+https://{username}.github.io/{repo-name}. For example, this could look like:
+``` JSON
+{
+  "name": "website",
+  "version": "0.1.0",
+  "homepage": "https://priyanshumahey.github.io/",
+  "private": true,
+```
+Inside package.json, we will also add a predeploy property and a deploy property to the scripts object. So it should end up looking something like:
+``` JSON
+"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+```
+
+We will then need to add a remote that points to the Git repository. This can be done using:
+``` shell
+$ git remote add origin https://github.com/{username}/{repo-name}.git
+```
+After this, deploying the app to GitHub Pages can be done through:
+``` shell
+$ npm run deploy
+```
+Now running the deploy command should run and deploy the website onto github!
+
+You can also choose to upload all the backend code to github if desired as well!
