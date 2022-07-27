@@ -21,12 +21,13 @@ For many REACT applications, Node is critical. Before continuining further, make
 
 NPM is the world's largest software registry. It holds pacakges which users can use in their applications and they can interact with it using the command line. It is bundled with Node and it will by highly useful for anything related to managing packages.
 
-NPX lets you run a command from a local or remote npm package. For REACT, the main command we'll be doing is `npx create-react-app` which will create a template for us to use.
+NPX lets you run a command from a local or remote npm package. For REACT, the main command we'll be doing is `npx create-react-app` which will create a template for us to use.To start, you'll just run the command `npx create-react-app name` where name is the name of the folder. You can also create it in the current folder using `npx create-react-app .`. If you're downloading the react application from online, you can use `npm install` which downloads all the required modules that are needed.
 
 ## Github
-
+Since we'll be deploying this REACT application to Github, make sure you have GIT installed on your computer and a github account to use. Setting up github desktop may also be helpful.
 
 ## Github Pages
+For deploymnent, we'll be making use of Github pages. Github pages will only deploy the front-end side of the REACT application. Github pages is use for static sites and will take all the HTML, CSS, and JavaScript then build it into a public website
 
 
 
@@ -37,3 +38,4 @@ NPX lets you run a command from a local or remote npm package. For REACT, the ma
 ## REACT Basics
 
 
+## Deployment on Github Pages
