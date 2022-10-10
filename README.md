@@ -29,7 +29,7 @@ Since we'll be deploying this REACT application to Github, make sure you have GI
 ## Github Pages
 For deploymnent, we'll be making use of Github pages. Github pages will only deploy the front-end side of the REACT application. Github pages is use for static sites and will take all the HTML, CSS, and JavaScript then build it into a public website. Later on, we discuss how to deploy a site to github pages using the `gh-pages` npm package.
 
-## REACT BOilerplate Structure
+## REACT Boilerplate Structure
 - node_modules: contains all the modules we use for the application
 - Public
     - index.html: the only html file, the one the gets rendered
